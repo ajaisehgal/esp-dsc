@@ -12,6 +12,10 @@ the appropriate enclosure for the board.
 
 More information about this project is available [on my website](https://synfin.net/sock_stream/tag/esp-dsc).
 
+You must have the Encoder library in your Arduino library directory.  It can be downloaded here:
+https://github.com/PaulStoffregen/Encoder/issues.
+
+
 ## v1.0 Status
 
  * Design PCB (complete!)
