@@ -13,7 +13,9 @@ the appropriate enclosure for the board.
 More information about this project is available [on my website](https://synfin.net/sock_stream/tag/esp-dsc).
 
 You must have the Encoder library in your Arduino library directory.  It can be downloaded here:
-https://github.com/PaulStoffregen/Encoder/issues.
+https://github.com/PaulStoffregen/Encoder/issues. There is a pull request in this branch that indicates a
+crashing bug on the ESP8266 with a proposed fix.  That fix was never integrated into Paul's master branch.
+A fixed version can be found here: https://github.com/realholgi/Encoder.
 
 
 ## v1.0 Status
