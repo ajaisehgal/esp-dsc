@@ -43,11 +43,16 @@ setup() {
     Serial.begin(SERIAL_SPEED);
 
 #ifdef DEBUG
+    delay(5000);
+    Serial.printf("Serial communications started.\n");
     pinMode(0, INPUT_PULLUP);
 #endif
 
 #ifdef ENABLE_WIFI
-    Serial.println("Starting up WiFi...");
+#ifdef DEBUG
+    delay(10000);
+    Serial.printf("Starting up WiFi...\n");
+#endif //DEBUG
 #ifdef AP_MODE
     WiFi.disconnect(true);
     WiFi.mode(WIFI_AP_STA);
@@ -55,7 +60,7 @@ setup() {
 #else
     WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
     while (WiFi.status() != WL_CONNECTED) {
-        Serial.print("Waiting for WiFi status to go live...\n");
+        snprintf("Waiting for WiFi status to go live...\n");
         delay(500);
     }
     Serial.printf("Connected to %s!\n", WIFI_AP);

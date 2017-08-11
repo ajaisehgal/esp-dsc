@@ -17,7 +17,18 @@
 #define CHAN_DEC_A   5     // RJ45 pin 7 NodeMCU D1
 #define CHAN_DEC_B   4     // RJ45 pin 5 NodeMCU D2
 #define CHAN_RA_A    2     // RJ45 pin 3 NodeMCU D4
-#define CHAN_RA_B   15     // RJ45 pin 1 NodeMCU D8
+#define CHAN_RA_B    14    // RJ45 pin 1 NodeMCU D5
+
+/* Friendly names for the NodeMCU V2 version */
+#define D0 16
+#define D1 5
+#define D2 4
+#define D3 0
+#define D4 2
+#define D5 14
+#define D6 12
+#define D7 13
+#define D8 15
 
 #define ESP_DSC_VERSION "0.0.2"
 #define MAX_SRV_CLIENTS 4
