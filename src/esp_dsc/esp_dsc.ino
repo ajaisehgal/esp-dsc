@@ -48,6 +48,11 @@ setup() {
     pinMode(0, INPUT_PULLUP);
 #endif
 
+pinMode(D1, INPUT_PULLUP);
+pinMode(D2, INPUT_PULLUP);
+pinMode(D4, INPUT_PULLUP);
+pinMode(D5, INPUT_PULLUP);
+
 #ifdef ENABLE_WIFI
 #ifdef DEBUG
     delay(10000);
