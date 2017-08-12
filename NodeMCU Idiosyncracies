@@ -1,0 +1,10 @@
+The esp-dsc project was originally built on the old ESP8266 12 chip.  This fork modifies it to work on the NodeMCU DevKits - specifically the AMICA versions but it should work with others.
+
+In making this work, I discovered many idiosyncracies of the chip that are not well documented which caused modifications to the original souces code - specifically around GPIO usage and capacitor requirments.
+1. Solder a 0.1uF capacitor directly to the NodeMCU board between VIn (VCC) and GND.  This acts as a high frequency filter to prevent the board from resetting randomly.
+2. Bridge your 5v rail (taken directly from the NodeMCU Vin pin) and the GND rail (connected to the NodeMCU GND) with a 470uF capacitor.  This was done to prevent the encoders (which take their power from this rail) from causing a voltage drop on Vin.
+3. Use a 10K pull-up resistor from the D3 I/O pin to 5v (not 3.3v!) and from D4 I/O pin to 5v.
+4. Connect I/O pin D8 to GND (pull-down).
+
+The original version of this code used pins D4 and D8 for one encoder.  Pins D3, D4 and D8 CANNOT BE USED as with encoders connected, they get pulled in a way that prevents the NodeMCU chip from booting. As such the code here is modified to use D5 and D6 for instead.  I also added code to set the I/O state to INPUT_PULLUP as the default state is to float the input which does not work all the time causing intermitent failure.
+
