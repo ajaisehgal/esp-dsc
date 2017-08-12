@@ -13,7 +13,7 @@
 11. Define your WiFi SSID and Password on lines 37 and 38
 12. Verify that the project compiles (Sketch>Verify/Compile)
 13. If you have a brand new NodeMCU module, it needs to be flashed with the latest firmware :
-    IMPORTANT: YOU MUST NOT HAVE ANYTHING CONNECTED TO V(in) WHILE FLASHING OR PROGRAMMING
+    IMPORTANT: YOU MUST NOT HAVE ANYTHING CONNECTED TO THE NODEMCU CHIP WHILE FLASHING OR PROGRAMMING SO DO THIS BEFORE CONNECTING ANYTHING!
     a.  Go to https://nodemcu-build.com/ and request a build with the “master” and default modules using their cloud build service.
     b.  When you receive the email notification of the build, download the .bin files.  You will see both integer and float versions.  Use the integer version as it takes up less room and the Arduino code this is based on is integer.
     c.  On Windows:
