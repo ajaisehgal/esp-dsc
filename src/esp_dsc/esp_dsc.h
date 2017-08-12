@@ -14,10 +14,10 @@
  */
 
 /* Encoder pins on RJ45 */
-#define CHAN_DEC_A   5     // RJ45 pin 7 NodeMCU D1
-#define CHAN_DEC_B   4     // RJ45 pin 5 NodeMCU D2
-#define CHAN_RA_A    2     // RJ45 pin 3 NodeMCU D4
-#define CHAN_RA_B    14    // RJ45 pin 1 NodeMCU D5
+#define CHAN_DEC_A   5     // NodeMCU D1
+#define CHAN_DEC_B   4     // NodeMCU D2
+#define CHAN_RA_A    12    // NodeMCU D6
+#define CHAN_RA_B    14    // NodeMCU D5
 
 /* Friendly names for the NodeMCU V2 version */
 #define D0 16
